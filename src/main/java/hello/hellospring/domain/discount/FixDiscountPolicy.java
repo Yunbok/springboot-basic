@@ -2,10 +2,12 @@ package hello.hellospring.domain.discount;
 
 import hello.hellospring.domain.Grade;
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FixDiscountPolicy implements DiscountPolicy {
 
-    private int discountFixAmount = 1000;
+    private final int discountFixAmount = 1000;
 
     @Override
     public int discount(Member member, int price) {

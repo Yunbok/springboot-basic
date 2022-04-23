@@ -2,10 +2,12 @@ package hello.hellospring.domain.discount;
 
 import hello.hellospring.domain.Grade;
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Component;
+
 
 public class RateDiscountPolicy implements DiscountPolicy{
 
-    private int discountPercent = 10;
+    private final int discountPercent = 10;
 
     @Override
     public int discount(Member member, int price) {
